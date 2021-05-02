@@ -2,7 +2,6 @@ const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
 //const db = require('./db');
-const routes = require("./Routes/api");
 
 const app = express();
 app.use(express.json());
@@ -11,12 +10,15 @@ app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-//home page
-app.use("/", routes);
 
 // static file-serving middleware
-app.use(express.static(path.join(__dirname, "..", "public")));
+app.use(express.static('public'));
+//app.use(express.static(path.join(__dirname, "..", "public")));
 //app.use('/static', express.static(path.join(__dirname, 'public')))
+
+//home page
+app.use("/api", require("./api/api"));
+
 
 app.use((err, req, res, next) => {
 	console.error(err.stack);
