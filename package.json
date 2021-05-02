@@ -1,0 +1,22 @@
+{
+  "name": "api-member",
+  "version": "1.0.0",
+  "description": "Basic html site with member id form testing GET, POST routes for ASAP API technical assessment",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SofijaSutton/API-member.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SofijaSutton/API-member/issues"
+  },
+  "homepage": "https://github.com/SofijaSutton/API-member#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
