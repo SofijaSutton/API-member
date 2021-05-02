@@ -1,7 +1,6 @@
 const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
-//const db = require('./db');
 
 const app = express();
 app.use(express.json());
@@ -13,8 +12,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // static file-serving middleware
 app.use(express.static('public'));
-//app.use(express.static(path.join(__dirname, "..", "public")));
-//app.use('/static', express.static(path.join(__dirname, 'public')))
 
 //home page
 app.use("/api", require("./api/api"));
